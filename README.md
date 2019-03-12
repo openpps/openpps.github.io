@@ -1,2 +1,3 @@
-# openpps.github.io
-openpps website
+# Open PPS 
+#### Open Programmable Power Supply
+
