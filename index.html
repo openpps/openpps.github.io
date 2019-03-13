@@ -11,6 +11,7 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="assets/css/main.css" />
 		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+		<script id="mcjs">!function(c,h,i,m,p){m=c.createElement(h),p=c.getElementsByTagName(h)[0],m.async=1,m.src=i,p.parentNode.insertBefore(m,p)}(document,"script","https://chimpstatic.com/mcjs-connected/js/users/cfb3a177a3cba8690a600f448/b86dd02f7e82ed02040e1de1d.js");</script>
 	</head>
 	<body class="is-preload">
 
@@ -19,7 +20,7 @@
 
 				<!-- Header -->
 					<header id="header" class="alt">
-						<span class="logo"><img src="images/logo.svg" alt="" /></span>
+						<span class="logo"><img src="images/logo.png" style="width:128px; height:128px;" alt="" /></span>
 						<h1>OpenPPS</h1>
 						<p>Open-source hardware project of a Programmable Power Supply.</p>
 					</header>
@@ -27,8 +28,8 @@
 				<!-- Nav -->
 					<nav id="nav">
 						<ul>
-							<li><a href="#cta">Introduction</a></li>
-							<li><a href="#intro" class="active">Core Board</a></li>
+							<li><a href="#intro">Introduction</a></li>
+							<li><a href="#cta" class="active">Core Board</a></li>
 							<li><a href="#first">Input and Output Boards</a></li>
 							<li><a href="#status">Status</a></li>
 						</ul>
@@ -38,12 +39,12 @@
 					<div id="main">
 
 					<!-- Get Started -->
-					<section id="cta" class="main special">
+					<section id="intro" class="main special">
 							<header class="major">
 								<h2>Open Programmable Power Supply</h2>
-								<p>The point of the project is to create a portable adjustable power supply with MCU (<b>ESP32</b>), screen, controls, <b>USB-C</b>, Wi-Fi, Bluetooth,  
-								reasonably wide input and output range, modular structure, hackability and more.<br />
-								Everything at the size of a 20,000 mAh power bank. </p>
+								<p>The point of the project is to create an open-source adjustable power supply with MCU (<b>ESP32</b>), screen, controls, <b>USB-C</b>, Wi-Fi, Bluetooth,  
+								reasonably wide input/output range, <b>portability</b>, modular structure, hackability and more.<br />
+								Everything at about the size of a 20,000 mAh power bank. </p>
 							</header>
 							<footer class="major">
 								<ul class="actions special">
@@ -52,8 +53,8 @@
 							</footer>
 						</section>
 
-						<!-- Introduction -->
-							<section id="intro" class="main">
+						<!-- Core Board -->
+							<section id="cta" class="main">
 								<div class="spotlight">
 									<div class="content">
 										<header class="major">
@@ -61,14 +62,16 @@
 										</header>
 										<ul>
 												<li><b>MCU</b>: ESP32</li>
-												<li><b>input</b>: 4.5 - 32 V</li>
-												<li><b>output</b>: 0.5 - 25 V</li>
-												<li><b>power</b>: up to 5A (100W)</li>
+												<li><b>DC input</b>: 4.5 - 32 V</li>
+												<li><b>DC output</b>: 1 - 25 V</li>
+												<li><b>power</b>: up to 5A/100W</li>
 												<li><b>efficiency</b>: up to 97%</li>
 												<li><b>CC/CV</b>, Power Good, Temperature Protection, Overvoltage Protection.</li>
 										</ul>
-										<p>Buck-Boost Converter IC with MCU control, ADC measurements (12 bit) and current limiting. Currently in developing/prototyping stage.<br />
-										Core Board can also be used as an separate <b>IoT</b> device where you need to control current or voltage over Wi-Fi and read various sensor values. Or as a module in other projects.</p>
+										<p>Buck-Boost Converter IC with MCU control, ADC measurements (12 bit) and current limiting. <br />
+										Core Board can also be used as a separate <b>IoT</b> device where you need to control/monitor DC voltage and current over Wi-Fi (lights, motors, battery charging etc.) and read various sensor data. 
+										Or as a module in other projects.</p>
+										Currently in developing/prototyping stage.
 									</div>
 									<span class="image"><img src="images/board.jpg" alt="" /></span>
 								</div>
@@ -81,10 +84,11 @@
 										<header class="major">
 											<h2>Input and Output Boards</h2>
 										</header>
-										<p><b>Input Board</b> is an optional part which offers various power input options for Core Board.<br />
+										<p><b>Input Board</b> is an optional part which offers various power input options for Core Board and internal battery charging.<br />
 										Can contain anything including USB-C, micro-USB, car plug adapter, solar panel input, DC jack etc.<br />
-										Or even an AC-DC SMPS if you like. <br />
-										<b>Output Board</b> is also optional and configurable. Can contain screen, controls, USB-A/USB-C charging ports, power supply output etc. </p>
+										Or even an AC-DC switched-mode power supply. <br />
+										<b>Output Board</b> is also optional and configurable. Contain screen, controls, USB charging ports, power supply output, MCU pins etc.<br />
+										USB-C and DC outputs are capable of charging notebooks.</p>
 									</div>
 								</div>
 							</section>
@@ -99,19 +103,24 @@
 											<li>
 												<span class="image"><img src="images/vasilii.jpg" alt="" style="width:128px; height:128px;"/></span>
 												<h3><b>Vasilii Atutov</b></h3>
-												<p>co-founder, CEO</p>
+												<p>Co-founder, CEO.</p>
 											</li>
 											<li>
 												<span class="image"><img src="images/vladi.jpg" alt="" style="width:128px; height:128px;"/></span>
 												<h3><b>Vladimir Grankovsky</b></h3>
-												<p>co-founder, programmer</p>
+												<p>Co-founder, programmer.</p>
 											</li>
-										</ul>
+											<li>
+													<span class="icon fa-github-square" style="font-size: 152px; line-height: 0.85em;"></span>
+													<h3 style="margin-top: 8px"><b>Open-Source</b></h3>
+													<p>The project is fully open-source.<br />Anyone can fork/contribute after initial commit <a href="https://github.com/openpps" target="_blank">at GitHub</a>.</p>
+											</li>
+									</ul>
 									<footer class="major">
-										<ul class="actions special">
-											<li>Support the project<br /> <a href="#" class="button primary">Subscribe to Updates</a></li>
-										</ul>
-									</footer>
+											<ul class="actions special">
+												<li>Support the project<br /> <a href="#" class="button primary">Subscribe to Updates</a></li>
+											</ul>
+										</footer>
 								</section>							
 
 					</div>
@@ -119,31 +128,23 @@
 				<!-- Footer -->
 					<footer id="footer">
 						<section>
-							<h2>Aliquam sed mauris</h2>
-							<p>Sed lorem ipsum dolor sit amet et nullam consequat feugiat consequat magna adipiscing tempus etiam dolore veroeros. eget dapibus mauris. Cras aliquet, nisl ut viverra sollicitudin, ligula erat egestas velit, vitae tincidunt odio.</p>
-							<ul class="actions">
-								<li><a href="generic.html" class="button">Learn More</a></li>
-							</ul>
+							<h2>OpenPPS</h2>
+							<p>If you want to support our project different way - you can tell someone about us, submit a donation, suggest a feautre or join our team. 
+								There's no such options on the website yet, so in this cases you can contact us with email. </p>
 						</section>
 						<section>
 							<h2>Where we are</h2>
 							<dl class="alt">
 								<dt>Location</dt>
 								<dd>Hong Kong (Tsuen Wan) &bull; China (Shenzhen)</dd>
-								<dt>Phone</dt>
-								<dd>+86 186-8223-3241</dd>
 								<dt>Email</dt>
-								<dd><a href="#">information@untitled.tld</a></dd>
+								<dd><a href="mailto:epicmap@gmail.com">epicmap@gmail.com</a></dd>
 							</dl>
 							<ul class="icons">
-								<li><a href="#" class="icon fa-twitter alt"><span class="label">Twitter</span></a></li>
-								<li><a href="#" class="icon fa-facebook alt"><span class="label">Facebook</span></a></li>
-								<li><a href="#" class="icon fa-instagram alt"><span class="label">Instagram</span></a></li>
-								<li><a href="#" class="icon fa-github alt"><span class="label">GitHub</span></a></li>
-								<li><a href="#" class="icon fa-dribbble alt"><span class="label">Dribbble</span></a></li>
+								<li><a href="https://github.com/openpps" class="icon fa-github alt"><span class="label">GitHub</span></a></li>
 							</ul>
 						</section>
-						<p class="copyright">&copy; Untitled. Design: <a href="https://html5up.net">HTML5 UP</a>.</p>
+						<p class="copyright">&copy; OpenPPS. Design: <a href="https://html5up.net">HTML5 UP</a>.</p>
 					</footer>
 
 			</div>
