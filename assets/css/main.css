@@ -2010,6 +2010,7 @@ input, select, textarea {
 		appearance: none;
 		border-radius: 8px;
 		border: solid 1px;
+		height: 2.75em;
 		color: inherit;
 		display: block;
 		outline: 0;
@@ -2143,7 +2144,6 @@ input, select, textarea {
 	input[type="email"],
 	select,
 	textarea {
-		background-color: rgba(255, 255, 255, 0.075);
 		border-color: rgba(255, 255, 255, 0.35);
 	}
 
@@ -3428,7 +3428,6 @@ input, select, textarea {
 		#main input[type="email"],
 		#main select,
 		#main textarea {
-			background-color: rgba(222, 222, 222, 0.25);
 			border-color: #dddddd;
 		}
 
